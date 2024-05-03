@@ -11,6 +11,7 @@
 		471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */; };
 		471E48CF2BE3AAAA008B0AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */; };
 		471E48D22BE3AAAA008B0AE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */; };
+		471E48D92BE3AF27008B0AE7 /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E48D82BE3AF27008B0AE7 /* LocationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		471E48D82BE3AF27008B0AE7 /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */,
 				471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */,
 				471E48D02BE3AAAA008B0AE7 /* Preview Content */,
+				471E48D82BE3AF27008B0AE7 /* LocationButton.swift */,
 			);
 			path = "Yokoso-Map-Practice";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471E48D92BE3AF27008B0AE7 /* LocationButton.swift in Sources */,
 				471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */,
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
 			);
@@ -275,6 +279,7 @@
 				DEVELOPMENT_TEAM = HB2C2JWPK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の取得に使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +309,7 @@
 				DEVELOPMENT_TEAM = HB2C2JWPK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の取得に使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
