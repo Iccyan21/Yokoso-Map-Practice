@@ -8,34 +8,42 @@
 import SwiftUI
 import MapKit
 
-struct ContentView: View {
-    @State var position: MapCameraPosition = .automatic // ←ここ追加
-    
-    var body: some View {
-        Map(position: $position) {
-            UserAnnotation(anchor: .center) // ←ここ追加
-            
-            Annotation("大阪駅",coordinate: .osaka_station,anchor: .bottom){
-                HStack{
-                    Image(systemName: "flag.2.crossed")
-                    Text("大阪駅")
-                    LocationButton(position: $position) // ←ここ追加
-                }
-                .foregroundColor(.blue)
-                .padding()
-                .background(in: .capsule)
-            }
-        }
-        .mapControls {
-            MapUserLocationButton()
-        }
-
-    }
+extension CLLocationCoordinate2D {
+    static let parking = CLLocationCoordinate2D(latitude: 42.354528, longitude: -71.068369)
 }
 
-extension CLLocationCoordinate2D {
-    static let osaka_station = CLLocationCoordinate2D(latitude: 34.7024854, longitude: 135.4933757)
-
+struct ContentView: View {
+    @State private var searchResults: [MKMapItem] = []
+    
+    var body: some View {
+        Map{
+            Annotation("Paking",coordinate: .parking){
+                ZStack{
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(.background)
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(.secondary,lineWidth: 5)
+                    Image(systemName: "car")
+                        .padding(5)
+                }
+            }
+            .annotationTitles(.hidden)
+            
+            ForEach(searchResults, id: \.self){ result in
+                Marker(item: result)
+            }
+        }
+        .mapStyle(.standard(elevation: .realistic))
+        .safeAreaInset(edge: .bottom){
+            HStack{
+                Spacer()
+                BeantownButtons(searchResults: $searchResults)
+                    .padding(.top)
+                Spacer()
+            }
+            .background(.thinMaterial)
+        }
+    }
 }
 
 #Preview {
