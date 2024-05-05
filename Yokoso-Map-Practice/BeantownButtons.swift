@@ -9,7 +9,13 @@ import SwiftUI
 import MapKit
 
 struct BeantownButtons: View {
-    @Binding var searchResults: [MKMapItem] 
+    
+    @Binding var position: MapCameraPosition
+    
+    @Binding var searchResults: [MKMapItem]
+    
+    var visibleRegion: MKCoordinateRegion?
+    
     var body: some View {
         HStack{
             Button{
@@ -23,6 +29,20 @@ struct BeantownButtons: View {
             } label: {
                 Label("beachs",systemImage: "beach.umbrella")
             } .buttonStyle(.borderedProminent)
+            
+            Button{
+                position = .region(.boston) 
+            } label: {
+                Label("Buston",systemImage: "building.2")
+            }
+            .buttonStyle(.bordered)
+            
+            Button{
+                position = .region(.northShore)
+            } label: {
+                Label("NorhShore",systemImage: "water.waves")
+            }
+            .buttonStyle(.bordered)
         }
         .labelStyle(.iconOnly)
     }
@@ -30,7 +50,7 @@ struct BeantownButtons: View {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = query
         request.resultTypes = .pointOfInterest
-        request.region = MKCoordinateRegion(
+        request.region = visibleRegion ?? MKCoordinateRegion(
             center: .parking,
             span: MKCoordinateSpan(latitudeDelta: 0.0125, longitudeDelta: 0.0125))
         Task{
