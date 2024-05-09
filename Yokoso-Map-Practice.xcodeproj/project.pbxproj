@@ -12,6 +12,7 @@
 		471E48CF2BE3AAAA008B0AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */; };
 		471E48D22BE3AAAA008B0AE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */; };
 		47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */; };
+		47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97C2BEC9341009E4D8D /* StationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		47BFE97C2BEC9341009E4D8D /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				471E48CA2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift */,
 				471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */,
 				47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */,
+				47BFE97C2BEC9341009E4D8D /* StationModel.swift */,
 				471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */,
 				471E48D02BE3AAAA008B0AE7 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */,
 				471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */,
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
 				47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */,

@@ -8,20 +8,27 @@
 import SwiftUI
 import MapKit
 
-extension CLLocationCoordinate2D {
-    static let tokyoStation = CLLocationCoordinate2D(latitude: 35.681271031625556, longitude: 139.76710334029735)
-}
+
 
 struct ContentView: View {
     let locationManager = LocationManager()
-    
-    @State private var userCameraPosition: MapCameraPosition = .userLocation(followsHeading: true,
-                                                                             fallback: .camera(MapCamera(centerCoordinate: .tokyoStation,
-                                                                                                         distance: 5000,
-                                                                                                         pitch: 60)))
+    // ユーザーのカメラ位置を管理
+    // もし掴み取れない場合は東京駅を表示
+    @State private var userCameraPosition: MapCameraPosition = .userLocation(followsHeading: false,
+                                                                             fallback:
+            .camera(MapCamera(centerCoordinate: .TokyoStation,distance: 5000,pitch: 60)))
     
     var body: some View {
         Map(position: $userCameraPosition) {
+            Annotation("Station",coordinate: .TokyoStation,anchor: .bottom)
+            {
+                Image(systemName: "tram")
+                    .padding(4)
+                    .foregroundStyle(.white)
+                    .background(Color.blue)
+                    .cornerRadius(4)
+                
+            }
             UserAnnotation()
         }
     }
