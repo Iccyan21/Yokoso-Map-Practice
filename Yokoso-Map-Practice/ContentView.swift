@@ -12,6 +12,9 @@ import MapKit
 
 struct ContentView: View {
     let locationManager = LocationManager()
+    @State private var selection: UUID?
+    @State private var showDetails: Bool = false
+    @State private var selectedStation: StationPoint?
     // ユーザーのカメラ位置を管理
     // もし掴み取れない場合は東京駅を表示
     @State private var userCameraPosition: MapCameraPosition = .userLocation(followsHeading: false,
@@ -19,18 +22,35 @@ struct ContentView: View {
             .camera(MapCamera(centerCoordinate: .TokyoStation,distance: 5000,pitch: 60)))
     
     var body: some View {
-        Map(position: $userCameraPosition) {
-            Annotation("Station",coordinate: .TokyoStation,anchor: .bottom)
-            {
-                Image(systemName: "tram")
-                    .padding(4)
-                    .foregroundStyle(.white)
-                    .background(Color.blue)
-                    .cornerRadius(4)
-                
+        Map(position: $userCameraPosition,selection: $selection) {
+            ForEach(stations){ location in
+                Marker(coordinate: location.coordinate){
+                    Button(action: {
+                        print("Marker tapped")
+                        self.selectedStation = location
+                        self.showDetails.toggle()
+                    }){
+                        VStack {
+                            Text(location.name)
+                                .foregroundColor(.black)
+                                .font(.caption)
+                            
+                            Image(systemName: "tram.fill")
+                                .foregroundColor(.blue)
+                        }
+                    }
+    
+                }
+                .tint(.blue)
             }
-            UserAnnotation()
+        }.sheet(isPresented: $showDetails) {
+            if let station = selectedStation {
+                StationDetail(station: station)
+            } else {
+                Text("No station selected")
+            }
         }
+
     }
 }
 

@@ -8,16 +8,10 @@
 import Foundation
 import MapKit
 
-struct Station: Identifiable {
-    let id = UUID()
-    let name: String
-    let coordinate: CLLocationCoordinate2D
-}
-
 let stations = [
-    Station(name: "新宿駅", coordinate: .ShinjukuStation),
-    Station(name: "渋谷駅", coordinate: .ShibuyaStation),
-    Station(name: "東京駅", coordinate: .TokyoStation)
+    StationPoint(name: "新宿駅", coordinate: .ShinjukuStation),
+    StationPoint(name: "渋谷駅", coordinate: .ShibuyaStation),
+    StationPoint(name: "東京駅", coordinate: .TokyoStation)
 ]
 
 extension CLLocationCoordinate2D {
