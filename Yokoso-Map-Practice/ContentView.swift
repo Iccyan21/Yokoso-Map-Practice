@@ -13,6 +13,7 @@ import MapKit
 struct ContentView: View {
     let locationManager = LocationManager()
     @State private var selection: UUID?
+    @State private var inputText = ""
     @State private var showDetails: Bool = false
     @State private var selectedStation: StationPoint?
     // ユーザーのカメラ位置を管理
@@ -24,11 +25,12 @@ struct ContentView: View {
     var body: some View {
         Map(position: $userCameraPosition,selection: $selection) {
             ForEach(stations){ location in
-                Marker(coordinate: location.coordinate){
+                Annotation(location.name, coordinate: location.coordinate){
                     Button(action: {
                         print("Marker tapped")
                         self.selectedStation = location
                         self.showDetails.toggle()
+                        print(location)
                     }){
                         VStack {
                             Text(location.name)
@@ -50,10 +52,10 @@ struct ContentView: View {
                 Text("No station selected")
             }
         }
-
     }
 }
 
 #Preview {
     ContentView()
 }
+
