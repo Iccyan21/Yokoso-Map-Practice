@@ -12,6 +12,7 @@ import MapKit
 
 struct ContentView: View {
     let locationManager = LocationManager()
+    @StateObject var viewModel = MapViewModel()
     @State private var selection: UUID?
     @State private var inputText = ""
     @State private var showDetails: Bool = false
@@ -39,7 +40,6 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
             Map(selection: $selection) {
-                
                 ForEach(filteredStations) { location in
                     Annotation(location.name, coordinate: location.coordinate) {
                         Button(action: {
@@ -122,4 +122,5 @@ struct SearchView: View {
         }
     }
 }
+
 
