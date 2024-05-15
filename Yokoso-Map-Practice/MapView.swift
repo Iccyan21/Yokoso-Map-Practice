@@ -53,6 +53,10 @@ class MapViewModel: ObservableObject {
 struct MapView: View {
     @StateObject var viewModel = MapViewModel()
     @State private var selection: UUID?
+    @State private var showDetails: Bool = false
+    @State private var selectedStation: StationPoint?
+    @State private var selectedLocation: MapPoint?
+    
     var body: some View {
         //Map(coordinateRegion: $viewModel.region, annotationItems: viewModel.points) { point in
             //MapMarker(coordinate: point.coordinate, tint: .blue)
@@ -62,13 +66,32 @@ struct MapView: View {
         //}
         Map(selection: $selection){
             ForEach(viewModel.points){ location in
-                Annotation(location.name,coordinate: location.coordinate){
-                    Text(location.name)
-                    Image(systemName: "tram.fill")
+                Annotation(location.name, coordinate: location.coordinate) {
+                    Button(action: {
+                        print("Marker tapped")
+                        self.selectedLocation = location
+                        self.showDetails.toggle()
+                        print(location)
+                    }) {
+                        VStack {
+                            Text(location.name)
+                                .foregroundColor(.black)
+                                .font(.caption)
+                            
+                            Image(systemName: "tram.fill")
+                                .foregroundColor(.blue)
+                        }
+                    }
                 }
+                .tint(.blue)
             }
         }.onAppear{
             viewModel.fetchMapPoints()
+        }
+        .sheet(isPresented: $showDetails) {
+            if let selectedLocation = selectedLocation {
+                LocationDetailView(location: selectedLocation)
+            }
         }
     }
 }
@@ -86,5 +109,23 @@ struct MapPoint: Identifiable, Decodable {
     
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+}
+
+// 詳細ビューの定義
+struct LocationDetailView: View {
+    let location: MapPoint
+    
+    var body: some View {
+        VStack {
+            Text("Hello")
+            Text(location.name)
+                .font(.largeTitle)
+                .padding()
+            
+            Text("Latitude: \(location.coordinate.latitude)")
+            Text("Longitude: \(location.coordinate.longitude)")
+        }
+        .padding()
     }
 }
