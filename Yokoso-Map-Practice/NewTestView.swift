@@ -13,27 +13,36 @@ struct NewTestView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            HStack{
+       
                 Text("SyuSyu")
                     .font(.largeTitle)
-                Text("Japanese-Izakaya")
-                    .font(.headline)
-            }
+                    .fontWeight(.bold)
+                    .padding(.bottom,10)
+            
+            Text("Japanese-Izakaya")
+                .font(.headline)
+                .fontWeight(.bold)
+                .padding(.bottom,10)
+            
             HStack{
                 Circle()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.green)
                 Text("11:00 ~ 22:00")
+                    .fontWeight(.bold)
+                
             }
             HStack{
                 Text("¥2000 - ¥5000")
                     .padding()
                     .padding(.trailing, 5)
+                    .fontWeight(.bold)
                 
                 Text("Freinds")
                     .padding(.vertical, 4)
                     .padding(.horizontal, 10)
                     .background(Color.white)
+                    .fontWeight(.bold)
                     .clipShape(Capsule())
                     .overlay(
                         Capsule()
@@ -42,8 +51,8 @@ struct NewTestView: View {
                     .background(
                         Capsule()
                             .fill(Color.blue)
-                            .padding(.trailing, -3)
-                            .padding(.bottom, -5)
+                            .padding(.trailing, -4)
+                            .padding(.bottom, -6)
                     )
                     .foregroundColor(.black)
                
@@ -51,6 +60,7 @@ struct NewTestView: View {
                 Text("Caple")
                     .padding(.vertical, 4)
                     .padding(.horizontal, 10)
+                    .fontWeight(.bold)
                     .background(Color.white)
                     .clipShape(Capsule())
                     .overlay(
@@ -60,8 +70,8 @@ struct NewTestView: View {
                     .background(
                         Capsule()
                             .fill(Color.blue)
-                            .padding(.trailing, -3)
-                            .padding(.bottom, -5)
+                            .padding(.trailing, -4)
+                            .padding(.bottom, -6)
                     )
                     .foregroundColor(.black)
             }
@@ -86,7 +96,7 @@ struct NewTestView: View {
             }.padding(.bottom, 15)
             
             Text("Built in 1912 (1912) modeled after the Eiffel Tower in Paris, Osaka's symbol Tsutenkaku, which is known throughout the country, means ``tower leading to heaven,'' and the current Tsutenkaku is the second generation.")
-                .font(.body)
+                .font(.headline)
                 .padding(.bottom, 20)
                 .padding(.horizontal,5)
             
@@ -97,7 +107,7 @@ struct NewTestView: View {
             
             HStack {
                 Text("Shinimamiya Station")
-                    .font(.caption)
+                    .font(.body)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading) // 左揃えに設定
                     .background(Color.white)

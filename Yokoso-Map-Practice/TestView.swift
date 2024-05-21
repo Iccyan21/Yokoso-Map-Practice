@@ -6,20 +6,13 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct TestView: View {
-    @State private var showDetails: Bool = false
     var body: some View {
-        VStack{
-            Text(".sheetってどうやって使うねん")
-            Button("シートを出す"){
-                showDetails.toggle()
-            }
-            .sheet(isPresented: $showDetails){
-                Text("yaa")
-            }
+        Map(){
+            UserAnnotation()
         }
-        
     }
 }
 

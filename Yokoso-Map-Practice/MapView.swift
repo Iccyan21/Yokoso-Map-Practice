@@ -65,6 +65,7 @@ struct MapView: View {
         //    viewModel.fetchMapPoints()
         //}
         Map(selection: $selection){
+            UserAnnotation()
             ForEach(viewModel.points){ location in
                 Annotation(location.name, coordinate: location.coordinate) {
                     Button(action: {

@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 
-
 struct ContentView: View {
     let locationManager = LocationManager()
     @StateObject var viewModel = MapViewModel()
@@ -40,6 +39,7 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
             Map(selection: $selection) {
+                UserAnnotation()
                 ForEach(filteredStations) { location in
                     Annotation(location.name, coordinate: location.coordinate) {
                         Button(action: {
