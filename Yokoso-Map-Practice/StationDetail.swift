@@ -13,6 +13,8 @@ import MapKit
 struct StationDetail: View {
     var startStation: StationPoint
     var endStation: StationPoint
+    // 経路を案内するボタンを押したときに実行されるクロージャ
+    // ユーザーがボタンを押したときに経路計算を開始するためのアクションを実行
     var onRouteRequested: () -> Void
     
     var body: some View {
@@ -63,6 +65,8 @@ func calculateRoute(from sourceCoordinate: CLLocationCoordinate2D, to destinatio
         return nil
     }
 }
+
+
 enum TransportType {
     case walking, driving, transit
 }
