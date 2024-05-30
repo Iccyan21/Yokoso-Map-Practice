@@ -20,6 +20,7 @@
 		47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52EED2BF8E4D900124352 /* NewTestView.swift */; };
 		47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */; };
 		47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97C2BEC9341009E4D8D /* StationModel.swift */; };
+		47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8867D2C08917E006C2A68 /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		47A52EED2BF8E4D900124352 /* NewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestView.swift; sourceTree = "<group>"; };
 		47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		47BFE97C2BEC9341009E4D8D /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		47C8867D2C08917E006C2A68 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				47BFE97C2BEC9341009E4D8D /* StationModel.swift */,
 				4754EA352BECB1DB00FC17E6 /* StationPoint.swift */,
 				4754EA3B2BEDC78F00FC17E6 /* TestView.swift */,
+				47C8867D2C08917E006C2A68 /* ContentView2.swift */,
 				471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */,
 				471E48D02BE3AAAA008B0AE7 /* Preview Content */,
 				47A52E8E2BF23A1000124352 /* HalfsheetView.swift */,
@@ -173,6 +176,7 @@
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
 				47A52E912BF34C6600124352 /* MapView.swift in Sources */,
 				4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */,
+				47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */,
 				47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */,
 				47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */,
 			);
