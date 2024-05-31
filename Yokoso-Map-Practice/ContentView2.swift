@@ -8,53 +8,48 @@
 import SwiftUI
 import MapKit
 
-struct MapState {
-    var region: MKCoordinateRegion
-}
-
-class MapViewModel2: ObservableObject {
-    @Published var currentRegion: MKCoordinateRegion
-    private var initialState: MapState
-    
-    init(region: MKCoordinateRegion) {
-        self.currentRegion = region
-        self.initialState = MapState(region: region)
-    }
-    
-    func saveState() {
-        initialState = MapState(region: currentRegion)
-    }
-    
-    func restoreState() {
-        currentRegion = initialState.region
-    }
-}
 
 struct ContentView2: View {
-    @StateObject private var viewModel = MapViewModel2(region: MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 35.681236, longitude: 139.767125),
-        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-    ))
+    @State private var showMap = true
+    @State private var showCancelButton = false
     
     var body: some View {
         VStack {
-            Map(coordinateRegion: $viewModel.currentRegion)
-                .edgesIgnoringSafeArea(.all)
-            HStack {
-                Button(action: {
-                    viewModel.saveState()
-                    // ナビゲーションを開始する処理をここに追加
-                }) {
-                    Text("ナビゲーション開始")
-                }
-                Button(action: {
-                    viewModel.restoreState()
-                }) {
-                    Text("キャンセル")
+            if showMap {
+                MapView2()
+                    .equatable()
+            }
+            
+            if showCancelButton {
+                Button("Cancel") {
+                    // Show/hide the map without triggering a redraw
+                    showMap.toggle()
+                    // Reset showMap to its original state to prevent redraw
+                    DispatchQueue.main.async {
+                        showMap.toggle()
+                    }
                 }
             }
-            .padding()
         }
+        .onAppear {
+            // Simulate showing the cancel button after some operation
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                showCancelButton = true
+            }
+        }
+    }
+}
+
+struct MapView2: View, Equatable {
+    static func == (lhs: MapView2, rhs: MapView2) -> Bool {
+        return true // Always equal to prevent redraw
+    }
+    
+    var body: some View {
+        Map(coordinateRegion: .constant(MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        )))
     }
 }
 
