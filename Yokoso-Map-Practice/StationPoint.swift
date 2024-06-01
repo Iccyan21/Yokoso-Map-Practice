@@ -7,12 +7,16 @@
 
 import MapKit
 
-struct StationPoint: Identifiable, Equatable {
+struct StationPoint: Identifiable, Equatable, Hashable {
     var id = UUID()
     var name: String
     var coordinate: CLLocationCoordinate2D
     
     static func == (lhs: StationPoint, rhs: StationPoint) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

@@ -8,151 +8,132 @@
 import SwiftUI
 import MapKit
 
+import Foundation
 
+
+// MapViewの定義
+struct MapView2: UIViewRepresentable {
+    @Binding var route: MKRoute?
+    @Binding var selectedPlace: CLLocationCoordinate2D?
+    @Binding var selectedStation: StationPoint?
+    @Binding var showButtons: Bool
+    
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView2
+        
+        init(parent: MapView2) {
+            self.parent = parent
+        }
+        
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if let route = overlay as? MKPolyline {
+                let renderer = MKPolylineRenderer(polyline: route)
+                renderer.strokeColor = .blue
+                renderer.lineWidth = 5
+                return renderer
+            }
+            return MKOverlayRenderer(overlay: overlay)
+        }
+        
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            if let annotation = view.annotation as? MKPointAnnotation,
+               let station = parent.stations.first(where: { $0.coordinate.isEqual(to: annotation.coordinate) }) {
+                parent.selectedStation = station
+                parent.showButtons = true // 駅が選択された時にボタンを表示
+            }
+        }
+    }
+    
+    var stations: [StationPoint]
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(parent: self)
+    }
+    
+    func makeUIView(context: Context) -> MKMapView {
+        let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        
+        // 駅のピンを地図に追加
+        for station in stations {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = station.coordinate
+            annotation.title = station.name
+            mapView.addAnnotation(annotation)
+        }
+        
+        return mapView
+    }
+    
+    func updateUIView(_ mapView: MKMapView, context: Context) {
+        mapView.removeOverlays(mapView.overlays)
+        
+        if let route = route {
+            mapView.addOverlay(route.polyline)
+        }
+        
+        if let selectedPlace = selectedPlace {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = selectedPlace
+            mapView.addAnnotation(annotation)
+            mapView.setRegion(MKCoordinateRegion(center: selectedPlace, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)), animated: true)
+        }
+    }
+}
+
+// ContentViewの定義
 struct ContentView: View {
-    @State private var showDetails = false
-    @State private var selectedStation: StationPoint? = nil
     @State private var route: MKRoute?
-    @State private var isShowingRoutes = false
-    @State private var transportType: MKDirectionsTransportType = .walking
-    @State private var showTransportOptions = false
+    @State private var selectedPlace: CLLocationCoordinate2D?
+    @State private var selectedStation: StationPoint?
+    @State private var showButtons = false
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                if isShowingRoutes, let route = route {
-                    Map {
-                        MapPolyline(route.polyline)
-                            .stroke(.blue, lineWidth: 8)
-                    }
-                    .edgesIgnoringSafeArea(.all)
-                } else {
-                    Map {
-                        let locations = [
-                            StationPoint(name: "東京駅", coordinate: .TokyoStation),
-                            StationPoint(name: "渋谷駅", coordinate: .ShibuyaStation),
-                            StationPoint(name: "新宿駅", coordinate: .ShinjukuStation)
-                            // 他の駅も追加
-                        ]
-                        
-                        ForEach(locations) { location in
-                            Annotation(location.name, coordinate: location.coordinate) {
-                                Button(action: {
-                                    print("Marker tapped")
-                                    self.selectedStation = location
-                                    self.showDetails.toggle()
-                                    print(location)
-                                }) {
-                                    VStack {
-                                        Text(location.name)
-                                            .foregroundColor(.black)
-                                            .font(.caption)
-                                        
-                                        Image(systemName: "tram.fill")
-                                            .foregroundColor(.blue)
-                                    }
-                                }
-                            }
+        VStack {
+            MapView2(route: $route, selectedPlace: $selectedPlace, selectedStation: $selectedStation, showButtons: $showButtons, stations: stations)
+                .edgesIgnoringSafeArea(.all)
+            
+            if showButtons {
+                HStack {
+                    Button("Show Route") {
+                        if let selectedStation = selectedStation {
+                            calculateRoute(to: selectedStation.coordinate)
                         }
                     }
-                }
-                
-                // 交通手段を選択するボタンを経路ボタンが押されたときに表示
-                if showTransportOptions {
-                    HStack(spacing: 32) {
-                        Spacer()
-                        Button {
-                            Task {
-                                if let station = selectedStation, let calculatedRoute = await calculateRoute(from: .TokyoStation, to: station.coordinate, transportType: .walking) {
-                                    route = calculatedRoute
-                                    isShowingRoutes = true
-                                    transportType = .walking
-                                } else {
-                                    print("徒歩ルート計算に失敗しました。")
-                                }
-                            }
-                        } label: {
-                            Image(systemName: "figure.walk")
-                                .padding(8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.white)
-                                )
-                                .padding(.top, 8)
-                        }
-                        
-                        Button {
-                            Task {
-                                if let station = selectedStation, let calculatedRoute = await calculateRoute(from: .TokyoStation, to: station.coordinate, transportType: .automobile) {
-                                    route = calculatedRoute
-                                    isShowingRoutes = true
-                                    transportType = .automobile
-                                } else {
-                                    print("自動車ルート計算に失敗しました。")
-                                }
-                            }
-                        } label: {
-                            Image(systemName: "car.fill")
-                                .padding(8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.white)
-                                )
-                                .padding(.top, 8)
-                        }
-                        
-                        Button {
-                            Task {
-                                if let station = selectedStation, let calculatedRoute = await calculateRoute(from: .TokyoStation, to: station.coordinate, transportType: .transit) {
-                                    route = calculatedRoute
-                                    isShowingRoutes = true
-                                    transportType = .transit
-                                } else {
-                                    print("公共交通機関ルート計算に失敗しました。")
-                                }
-                            }
-                        } label: {
-                            Image(systemName: "tram.fill")
-                                .padding(8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.white)
-                                )
-                                .padding(.top, 8)
-                        }
-                        
-                        Button {
-                            route = nil
-                            isShowingRoutes = false
-                            showTransportOptions = false
-                        } label: {
-                            Text("キャンセル")
-                                .padding(8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.white)
-                                )
-                                .padding(.top, 8)
-                        }
-                        Spacer()
+                    .padding()
+                    
+                    Button("Cancel") {
+                        route = nil
+                        selectedStation = nil // PickerをリセットするためにselectedStationをnilに設定
+                        showButtons = false // ボタンを隠す
                     }
-                    .background(.thinMaterial)
+                    .padding()
                 }
             }
-            .sheet(isPresented: $showDetails) {
-                if let station = selectedStation {
-                    StationDetail(
-                        startStation: StationPoint(name: "東京駅", coordinate: .TokyoStation),
-                        endStation: station
-                    ) {
-                        self.showDetails = false
-                        self.showTransportOptions = true
-                    }
-                } else {
-                    Text("No station selected")
-                        .edgesIgnoringSafeArea(.all)
-                        .background(Color.clear)
-                }
+        }
+    }
+    
+    func calculateRoute(to destination: CLLocationCoordinate2D) {
+        // 選択した場所を設定
+        let sourceLocation = CLLocationCoordinate2D(latitude: 35.681236, longitude: 139.767125) // 東京駅
+        let destinationLocation = destination
+        
+        let sourcePlacemark = MKPlacemark(coordinate: sourceLocation)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationLocation)
+        
+        let sourceItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationItem = MKMapItem(placemark: destinationPlacemark)
+        
+        let request = MKDirections.Request()
+        request.source = sourceItem
+        request.destination = destinationItem
+        request.transportType = .automobile
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            if let route = response?.routes.first {
+                self.route = route
+                self.selectedPlace = destinationLocation
             }
         }
     }
