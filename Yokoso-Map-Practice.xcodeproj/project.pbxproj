@@ -21,6 +21,7 @@
 		47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */; };
 		47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97C2BEC9341009E4D8D /* StationModel.swift */; };
 		47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8867D2C08917E006C2A68 /* ContentView2.swift */; };
+		47C886872C0D5C66006C2A68 /* MapView-Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C886862C0D5C66006C2A68 /* MapView-Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		47BFE97C2BEC9341009E4D8D /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		47C8867D2C08917E006C2A68 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		47C886862C0D5C66006C2A68 /* MapView-Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView-Test.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */,
 				471E48D02BE3AAAA008B0AE7 /* Preview Content */,
 				47A52E8E2BF23A1000124352 /* HalfsheetView.swift */,
+				47C886862C0D5C66006C2A68 /* MapView-Test.swift */,
 			);
 			path = "Yokoso-Map-Practice";
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				4754EA3A2BEDC1DB00FC17E6 /* StationDetail.swift in Sources */,
 				4754EA3C2BEDC78F00FC17E6 /* TestView.swift in Sources */,
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
+				47C886872C0D5C66006C2A68 /* MapView-Test.swift in Sources */,
 				47A52E912BF34C6600124352 /* MapView.swift in Sources */,
 				4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */,
 				47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */,
