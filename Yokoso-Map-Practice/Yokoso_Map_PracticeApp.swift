@@ -11,7 +11,7 @@ import SwiftUI
 struct Yokoso_Map_PracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            MapView2(stations: stations)
+            HomeView()
         }
     }
 }

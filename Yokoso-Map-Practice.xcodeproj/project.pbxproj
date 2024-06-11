@@ -12,9 +12,12 @@
 		471E48CF2BE3AAAA008B0AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */; };
 		471E48D22BE3AAAA008B0AE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */; };
 		4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754EA352BECB1DB00FC17E6 /* StationPoint.swift */; };
-		4754EA382BEDBB3B00FC17E6 /* LocationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754EA372BEDBB3B00FC17E6 /* LocationPreview.swift */; };
 		4754EA3A2BEDC1DB00FC17E6 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754EA392BEDC1DB00FC17E6 /* StationDetail.swift */; };
 		4754EA3C2BEDC78F00FC17E6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4754EA3B2BEDC78F00FC17E6 /* TestView.swift */; };
+		475B6FB72C15BD470031DCC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FB62C15BD470031DCC8 /* HomeView.swift */; };
+		475B6FBA2C16F4880031DCC8 /* TabViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FB92C16F4880031DCC8 /* TabViewImage.swift */; };
+		475B6FBC2C16FA7D0031DCC8 /* WordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */; };
+		475B6FBE2C1705950031DCC8 /* LandmarkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */; };
 		47A52E8F2BF23A1000124352 /* HalfsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E8E2BF23A1000124352 /* HalfsheetView.swift */; };
 		47A52E912BF34C6600124352 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E902BF34C6600124352 /* MapView.swift */; };
 		47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52EED2BF8E4D900124352 /* NewTestView.swift */; };
@@ -22,6 +25,9 @@
 		47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFE97C2BEC9341009E4D8D /* StationModel.swift */; };
 		47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C8867D2C08917E006C2A68 /* ContentView2.swift */; };
 		47C886872C0D5C66006C2A68 /* MapView-Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C886862C0D5C66006C2A68 /* MapView-Test.swift */; };
+		47C886932C0E1FB4006C2A68 /* LocationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C886922C0E1FB4006C2A68 /* LocationPreview.swift */; };
+		47C886952C109882006C2A68 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C886942C109882006C2A68 /* SwiftUIView.swift */; };
+		47C886B62C119366006C2A68 /* PlaceSearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C886B52C119366006C2A68 /* PlaceSearchText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +37,12 @@
 		471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4754EA352BECB1DB00FC17E6 /* StationPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPoint.swift; sourceTree = "<group>"; };
-		4754EA372BEDBB3B00FC17E6 /* LocationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreview.swift; sourceTree = "<group>"; };
 		4754EA392BEDC1DB00FC17E6 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		4754EA3B2BEDC78F00FC17E6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		475B6FB62C15BD470031DCC8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		475B6FB92C16F4880031DCC8 /* TabViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewImage.swift; sourceTree = "<group>"; };
+		475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordButtonView.swift; sourceTree = "<group>"; };
+		475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCardView.swift; sourceTree = "<group>"; };
 		47A52E8E2BF23A1000124352 /* HalfsheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfsheetView.swift; sourceTree = "<group>"; };
 		47A52E902BF34C6600124352 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		47A52EED2BF8E4D900124352 /* NewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestView.swift; sourceTree = "<group>"; };
@@ -41,6 +50,9 @@
 		47BFE97C2BEC9341009E4D8D /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		47C8867D2C08917E006C2A68 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		47C886862C0D5C66006C2A68 /* MapView-Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView-Test.swift"; sourceTree = "<group>"; };
+		47C886922C0E1FB4006C2A68 /* LocationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreview.swift; sourceTree = "<group>"; };
+		47C886942C109882006C2A68 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		47C886B52C119366006C2A68 /* PlaceSearchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +85,12 @@
 		471E48C92BE3AAA8008B0AE7 /* Yokoso-Map-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				475B6FB52C15BD350031DCC8 /* NewUIView */,
 				471E48CA2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift */,
 				471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */,
 				47A52EED2BF8E4D900124352 /* NewTestView.swift */,
 				47A52E902BF34C6600124352 /* MapView.swift */,
 				4754EA392BEDC1DB00FC17E6 /* StationDetail.swift */,
-				4754EA372BEDBB3B00FC17E6 /* LocationPreview.swift */,
 				47BFE97A2BE8ABB8009E4D8D /* LocationManager.swift */,
 				47BFE97C2BEC9341009E4D8D /* StationModel.swift */,
 				4754EA352BECB1DB00FC17E6 /* StationPoint.swift */,
@@ -88,6 +100,9 @@
 				471E48D02BE3AAAA008B0AE7 /* Preview Content */,
 				47A52E8E2BF23A1000124352 /* HalfsheetView.swift */,
 				47C886862C0D5C66006C2A68 /* MapView-Test.swift */,
+				47C886922C0E1FB4006C2A68 /* LocationPreview.swift */,
+				47C886942C109882006C2A68 /* SwiftUIView.swift */,
+				47C886B52C119366006C2A68 /* PlaceSearchText.swift */,
 			);
 			path = "Yokoso-Map-Practice";
 			sourceTree = "<group>";
@@ -98,6 +113,17 @@
 				471E48D12BE3AAAA008B0AE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		475B6FB52C15BD350031DCC8 /* NewUIView */ = {
+			isa = PBXGroup;
+			children = (
+				475B6FB62C15BD470031DCC8 /* HomeView.swift */,
+				475B6FB92C16F4880031DCC8 /* TabViewImage.swift */,
+				475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */,
+				475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */,
+			);
+			path = NewUIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,17 +196,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C886932C0E1FB4006C2A68 /* LocationPreview.swift in Sources */,
 				47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */,
 				47A52E8F2BF23A1000124352 /* HalfsheetView.swift in Sources */,
-				4754EA382BEDBB3B00FC17E6 /* LocationPreview.swift in Sources */,
 				471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */,
+				475B6FBE2C1705950031DCC8 /* LandmarkCardView.swift in Sources */,
 				4754EA3A2BEDC1DB00FC17E6 /* StationDetail.swift in Sources */,
 				4754EA3C2BEDC78F00FC17E6 /* TestView.swift in Sources */,
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
+				475B6FBA2C16F4880031DCC8 /* TabViewImage.swift in Sources */,
 				47C886872C0D5C66006C2A68 /* MapView-Test.swift in Sources */,
+				47C886952C109882006C2A68 /* SwiftUIView.swift in Sources */,
+				475B6FBC2C16FA7D0031DCC8 /* WordButtonView.swift in Sources */,
 				47A52E912BF34C6600124352 /* MapView.swift in Sources */,
 				4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */,
+				47C886B62C119366006C2A68 /* PlaceSearchText.swift in Sources */,
 				47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */,
+				475B6FB72C15BD470031DCC8 /* HomeView.swift in Sources */,
 				47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */,
 				47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */,
 			);
@@ -313,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yokoso-Map-Practice/Preview Content\"";
@@ -332,6 +365,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Iccyan21.Yokoso-Map-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yokoso-Map-Practice/Preview Content\"";
@@ -362,6 +397,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Iccyan21.Yokoso-Map-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

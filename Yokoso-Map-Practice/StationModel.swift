@@ -18,6 +18,7 @@ extension CLLocationCoordinate2D {
     static let ShinjukuStation = CLLocationCoordinate2D(latitude: 35.6895, longitude: 139.6917)
     static let ShibuyaStation = CLLocationCoordinate2D(latitude: 35.6580, longitude: 139.7017)
     static let TokyoStation = CLLocationCoordinate2D(latitude: 35.6812, longitude: 139.7671)
+    static let tokyoStationStreet = CLLocationCoordinate2D(latitude: 35.679981237178694, longitude: 139.76897015768628)
     
     // カスタムの比較関数
     func isEqual(to other: CLLocationCoordinate2D) -> Bool {
