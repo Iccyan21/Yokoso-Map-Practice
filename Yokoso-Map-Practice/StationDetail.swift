@@ -62,6 +62,13 @@ func calculateRoute(from sourceCoordinate: CLLocationCoordinate2D, to destinatio
         return response.routes.first
     } catch {
         print("ルート計算エラー: \(error.localizedDescription)")
+ 
+        
+        print("ルート計算エラー: \(error.localizedDescription)")
+  
+        print("ルート計算エラー: \(error.localizedDescription)")
+     
+        print("ルート計算エラー: \(error.localizedDescription)")
         return nil
     }
 }
