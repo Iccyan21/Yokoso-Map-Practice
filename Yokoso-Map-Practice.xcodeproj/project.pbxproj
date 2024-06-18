@@ -18,6 +18,8 @@
 		475B6FBA2C16F4880031DCC8 /* TabViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FB92C16F4880031DCC8 /* TabViewImage.swift */; };
 		475B6FBC2C16FA7D0031DCC8 /* WordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */; };
 		475B6FBE2C1705950031DCC8 /* LandmarkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */; };
+		478B6E5E2C1FFAB3001E9F32 /* NewPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B6E5D2C1FFAB3001E9F32 /* NewPlaceView.swift */; };
+		478B6E602C1FFCE4001E9F32 /* TabImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B6E5F2C1FFCE4001E9F32 /* TabImageView.swift */; };
 		47A52E8F2BF23A1000124352 /* HalfsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E8E2BF23A1000124352 /* HalfsheetView.swift */; };
 		47A52E912BF34C6600124352 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E902BF34C6600124352 /* MapView.swift */; };
 		47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52EED2BF8E4D900124352 /* NewTestView.swift */; };
@@ -43,6 +45,8 @@
 		475B6FB92C16F4880031DCC8 /* TabViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewImage.swift; sourceTree = "<group>"; };
 		475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordButtonView.swift; sourceTree = "<group>"; };
 		475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCardView.swift; sourceTree = "<group>"; };
+		478B6E5D2C1FFAB3001E9F32 /* NewPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceView.swift; sourceTree = "<group>"; };
+		478B6E5F2C1FFCE4001E9F32 /* TabImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabImageView.swift; sourceTree = "<group>"; };
 		47A52E8E2BF23A1000124352 /* HalfsheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfsheetView.swift; sourceTree = "<group>"; };
 		47A52E902BF34C6600124352 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		47A52EED2BF8E4D900124352 /* NewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				47C886922C0E1FB4006C2A68 /* LocationPreview.swift */,
 				47C886942C109882006C2A68 /* SwiftUIView.swift */,
 				47C886B52C119366006C2A68 /* PlaceSearchText.swift */,
+				478B6E5D2C1FFAB3001E9F32 /* NewPlaceView.swift */,
+				478B6E5F2C1FFCE4001E9F32 /* TabImageView.swift */,
 			);
 			path = "Yokoso-Map-Practice";
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 				475B6FBE2C1705950031DCC8 /* LandmarkCardView.swift in Sources */,
 				4754EA3A2BEDC1DB00FC17E6 /* StationDetail.swift in Sources */,
 				4754EA3C2BEDC78F00FC17E6 /* TestView.swift in Sources */,
+				478B6E5E2C1FFAB3001E9F32 /* NewPlaceView.swift in Sources */,
 				471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */,
 				475B6FBA2C16F4880031DCC8 /* TabViewImage.swift in Sources */,
 				47C886872C0D5C66006C2A68 /* MapView-Test.swift in Sources */,
@@ -211,6 +218,7 @@
 				47A52E912BF34C6600124352 /* MapView.swift in Sources */,
 				4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */,
 				47C886B62C119366006C2A68 /* PlaceSearchText.swift in Sources */,
+				478B6E602C1FFCE4001E9F32 /* TabImageView.swift in Sources */,
 				47C8867E2C08917E006C2A68 /* ContentView2.swift in Sources */,
 				475B6FB72C15BD470031DCC8 /* HomeView.swift in Sources */,
 				47BFE97B2BE8ABB8009E4D8D /* LocationManager.swift in Sources */,

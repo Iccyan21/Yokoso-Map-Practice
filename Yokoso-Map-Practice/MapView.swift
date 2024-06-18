@@ -94,6 +94,9 @@ struct MapView: View {
                 LocationDetailView(location: selectedLocation)
             }
         }
+        .sheet(isPresented: $showDetails){
+            NewPlaceView()
+        }
     }
 }
 

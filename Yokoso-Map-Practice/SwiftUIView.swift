@@ -29,7 +29,20 @@ struct SwiftUIView: View {
             }
         }
         .padding()
-       
+        
+        Button(action: {
+            // Add your action here
+        }) {
+            Text("Go Here !!")
+                .font(.system(size: 20, weight: .bold))
+                .foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.green)
+                .cornerRadius(15)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+        }
+        .padding(.horizontal)
     }
 }
 
