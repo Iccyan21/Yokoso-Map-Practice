@@ -23,6 +23,7 @@
 		47A52E8F2BF23A1000124352 /* HalfsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E8E2BF23A1000124352 /* HalfsheetView.swift */; };
 		47A52E912BF34C6600124352 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52E902BF34C6600124352 /* MapView.swift */; };
 		47A52EEE2BF8E4D900124352 /* NewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A52EED2BF8E4D900124352 /* NewTestView.swift */; };
+		47B5EA6D2C2D46C1007B529E /* LauchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B5EA6C2C2D46C1007B529E /* LauchScreen.swift */; };
 		47B885002C24098B003047F1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B884FF2C24098B003047F1 /* SettingView.swift */; };
 		47B885042C240AAB003047F1 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B885032C240AAB003047F1 /* TermsView.swift */; };
 		47B885062C240ACB003047F1 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B885052C240ACB003047F1 /* PrivacyPolicyView.swift */; };
@@ -53,6 +54,8 @@
 		47A52E8E2BF23A1000124352 /* HalfsheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfsheetView.swift; sourceTree = "<group>"; };
 		47A52E902BF34C6600124352 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		47A52EED2BF8E4D900124352 /* NewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTestView.swift; sourceTree = "<group>"; };
+		47B5EA6C2C2D46C1007B529E /* LauchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchScreen.swift; sourceTree = "<group>"; };
+		47B5EA6E2C2D4B56007B529E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		47B884FF2C24098B003047F1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		47B885032C240AAB003047F1 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		47B885052C240ACB003047F1 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		471E48C92BE3AAA8008B0AE7 /* Yokoso-Map-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				47B5EA6E2C2D4B56007B529E /* Info.plist */,
 				47B884FE2C240967003047F1 /* New Group */,
 				475B6FB52C15BD350031DCC8 /* NewUIView */,
 				471E48CA2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift */,
@@ -116,6 +120,7 @@
 				47C886B52C119366006C2A68 /* PlaceSearchText.swift */,
 				478B6E5D2C1FFAB3001E9F32 /* NewPlaceView.swift */,
 				478B6E5F2C1FFCE4001E9F32 /* TabImageView.swift */,
+				47B5EA6C2C2D46C1007B529E /* LauchScreen.swift */,
 			);
 			path = "Yokoso-Map-Practice";
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				47C886932C0E1FB4006C2A68 /* LocationPreview.swift in Sources */,
 				47BFE97D2BEC9341009E4D8D /* StationModel.swift in Sources */,
+				47B5EA6D2C2D46C1007B529E /* LauchScreen.swift in Sources */,
 				47A52E8F2BF23A1000124352 /* HalfsheetView.swift in Sources */,
 				471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */,
 				475B6FBE2C1705950031DCC8 /* LandmarkCardView.swift in Sources */,
@@ -380,10 +386,10 @@
 				DEVELOPMENT_TEAM = HB2C2JWPK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yokoso-Map-Practice/Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の取得に使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,10 +418,10 @@
 				DEVELOPMENT_TEAM = HB2C2JWPK5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Yokoso-Map-Practice/Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の取得に使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
