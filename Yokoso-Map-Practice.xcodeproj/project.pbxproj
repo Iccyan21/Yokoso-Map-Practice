@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47074F6D2C316933003CF2B7 /* NewEreaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47074F6C2C316933003CF2B7 /* NewEreaCard.swift */; };
 		471E48CB2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E48CA2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift */; };
 		471E48CD2BE3AAA8008B0AE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */; };
 		471E48CF2BE3AAAA008B0AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471E48CE2BE3AAAA008B0AE7 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47074F6C2C316933003CF2B7 /* NewEreaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEreaCard.swift; sourceTree = "<group>"; };
 		471E48C72BE3AAA8008B0AE7 /* Yokoso-Map-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yokoso-Map-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		471E48CA2BE3AAA8008B0AE7 /* Yokoso_Map_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yokoso_Map_PracticeApp.swift; sourceTree = "<group>"; };
 		471E48CC2BE3AAA8008B0AE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				475B6FB92C16F4880031DCC8 /* TabViewImage.swift */,
 				475B6FBB2C16FA7D0031DCC8 /* WordButtonView.swift */,
 				475B6FBD2C1705950031DCC8 /* LandmarkCardView.swift */,
+				47074F6C2C316933003CF2B7 /* NewEreaCard.swift */,
 			);
 			path = NewUIView;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				47C886952C109882006C2A68 /* SwiftUIView.swift in Sources */,
 				475B6FBC2C16FA7D0031DCC8 /* WordButtonView.swift in Sources */,
 				47A52E912BF34C6600124352 /* MapView.swift in Sources */,
+				47074F6D2C316933003CF2B7 /* NewEreaCard.swift in Sources */,
 				4754EA362BECB1DB00FC17E6 /* StationPoint.swift in Sources */,
 				47B885042C240AAB003047F1 /* TermsView.swift in Sources */,
 				47C886B62C119366006C2A68 /* PlaceSearchText.swift in Sources */,

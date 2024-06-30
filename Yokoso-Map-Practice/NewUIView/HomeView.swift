@@ -16,7 +16,7 @@ struct HomeView: View {
                 ZStack{
                     Image("HomeTopView")
                         .resizable()
-                        .frame(width: 400, height: 320)
+                        .frame(height: 320)
                         .scaledToFit()
                     
                     VStack(alignment: .leading, spacing: 10){
@@ -76,7 +76,7 @@ struct HomeView: View {
                         
                 } // EventTabView
                 .padding(.top,20)
-                .padding(.horizontal,25)
+                .padding(.horizontal)
                 .padding(.bottom,50)
                 
                 // WordMannerView
@@ -84,6 +84,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Communication in trouble?")
                         .font(.title2)
+                        .padding(.horizontal,-60)
                         .fontWeight(.bold)
                         .padding(.bottom,10)
                     
@@ -137,7 +138,7 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .background(.yellow)
                         .cornerRadius(10)
-                    }
+                    }.padding(.horizontal,-60)
                     HStack{
                         VStack {
                             Image(systemName:  "car.fill")
@@ -172,17 +173,14 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .background(.green)
                         .cornerRadius(10)
-                    }
+                    }.padding(.horizontal,-60)
                     
                     Spacer()
                 } // WordManner
                 .padding(.top,-40)
-                .padding(.horizontal,30)
-                
                 
                 
                 // EreaCard
-                
                 VStack(alignment: .leading) {
                     Text("Erea")
                         .font(.largeTitle)
@@ -190,16 +188,15 @@ struct HomeView: View {
                         .padding(.leading)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 10) {
                             ForEach(0..<3) { index in
-                                CardView(imageName: imageName(for: index), cityName: cityName(for: index))
+                                NewEreaCard()
+                                    .frame(width: 380) // 固定幅を設定
+                                    .padding(.trailing, index == 2 ? 20 : 0)
                             }
                         }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top)
-                .padding(.horizontal,20)
+                    }.padding(.top,-20)
+                }.padding(.horizontal)
                 
                 // PlaceCard
                 VStack(alignment: .leading) {
