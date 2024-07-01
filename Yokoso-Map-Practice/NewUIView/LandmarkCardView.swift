@@ -17,7 +17,7 @@ struct LandmarkCardView: View {
             Image("Tsutenkaku-1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 120, height: 175)
+                .frame(width: 170, height: 220)
                 .clipped()
                 .cornerRadius(10)
            
@@ -37,7 +37,7 @@ struct LandmarkCardView: View {
             }
             
         }
-        .frame(width: 140, height: 260) // Set the same frame size for both cards
+        .frame(width: 180, height: 300) // Set the same frame size for both cards
         .background(Color.white)
         .cornerRadius(10)
         .shadow(color: Color.gray.opacity(1), radius: 5, x: 0, y: 5)

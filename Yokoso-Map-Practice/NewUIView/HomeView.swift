@@ -208,7 +208,7 @@ struct HomeView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20){
                             ForEach(0..<3) { index in
-                                LandmarkCardView(title: "Tsutenkaku")
+                                NewPlaceCardView()
                             }
                         }
                         .padding(.horizontal)
