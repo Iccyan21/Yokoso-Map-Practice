@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Yokoso_Map_PracticeApp: App {
+    @AppStorage("hasSeenTutorial") var hasSeenTutorial: Bool = false
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            if hasSeenTutorial{
+                HomeView()
+            } else {
+                TutorialView()
+            }
         }
     }
 }
